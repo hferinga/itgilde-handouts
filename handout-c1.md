@@ -144,7 +144,7 @@ Role ARN for CloudWatch logging (global setting):
 - arn:aws:iam::<youraccoundid>:role/API-Gateway-Allow_log
 
 ## Resource poll
-- Method: **GET**
+- Method: **`GET`**
 - Integration Request:
   *  Action: Scan
   *  Mapping Templates (application/json): When there are no templates defined.
