@@ -5,6 +5,11 @@ Publicly available on GitHub:
 
 https://github.com/hferinga/itgilde-handouts/blob/master/handout-c1.md
 
+and on GitLab:
+
+https://gitlab.com/itgilde-hansferinga/learning-by-doing-ch1/blob/master/handout-c1.md
+
+
 - Challenge: `Building a minimal serverless application`
 - Region: `eu-west-1 (Ireland)`
 
@@ -151,7 +156,10 @@ Role ARN for CloudWatch logging (global setting):
     "ScanFilter": { "active": { "AttributeValueList" : [ {"BOOL": true } ], "ComparisonOperator": "EQ" } }
 }
 ```
-  
+
+Some references for mapping templates:
+https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html  
+http://velocity.apache.org/engine/devel/vtl-reference.html
 
 ## Resource results
 - Method: GET
