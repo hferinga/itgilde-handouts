@@ -162,7 +162,7 @@ Some references for mapping templates:
 - http://velocity.apache.org/engine/devel/vtl-reference.html
 
 ## Resource results
-- Method: GET
+- Method: **`GET`**
 - Method Request:
    * URL Query String Parameters: `pollId, required`
    * Request Validator: `Validate query string parameters and headers`
@@ -191,7 +191,7 @@ Some references for mapping templates:
 ```
 
 ## Resource vote
-- Method: POST
+- Method: **`POST`**
 - Integration Request:
   * Action: `PutItem`
   * Mapping Templates (application/json): `When there are no templates defined.`
