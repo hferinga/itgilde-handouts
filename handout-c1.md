@@ -1,6 +1,10 @@
 # Handout Kickoff "Learning by doing" challenge 1; 16 may 2019 
 This document is formatted for Gitlab markdown.
 
+Publicly available on GitHub:
+
+https://github.com/hferinga/itgilde-handouts/blob/master/handout-c1.md
+
 - Challenge: `Building a minimal serverless application`
 - Region: `eu-west-1 (Ireland)`
 
