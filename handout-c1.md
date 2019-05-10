@@ -146,7 +146,7 @@ Role ARN for CloudWatch logging (global setting):
 ## Resource poll
 - Method: **`GET`**
 - Integration Request:
-  *  Action: Scan
+  *  Action: `Scan`
   *  Mapping Templates (application/json): When there are no templates defined.
 
 ```json
