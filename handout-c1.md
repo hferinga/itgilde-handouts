@@ -158,8 +158,8 @@ Role ARN for CloudWatch logging (global setting):
 ```
 
 Some references for mapping templates:
-https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html  
-http://velocity.apache.org/engine/devel/vtl-reference.html
+- https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html  
+- http://velocity.apache.org/engine/devel/vtl-reference.html
 
 ## Resource results
 - Method: GET
