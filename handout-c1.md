@@ -124,7 +124,7 @@ Example item:
   "pollId": 1,
   "qa": "Yes:yes,No:no,Dunno:dunno,Don't care:dontcare,No opinion:noopinion"
 }
-
+```
 The 'qa' field is a string that is formatted as follows:   
 `<displayed answer>:<value>,<displayed answer>:<value>,..,..`
 
