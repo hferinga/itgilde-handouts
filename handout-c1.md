@@ -116,6 +116,21 @@ Contains the poll statement and answer choices
 Indexes:
 - none
 
+Example item:
+```json
+{
+  "active": true,
+  "poll": "The world's population will have grown to 10 Billion at the turn of the century",
+  "pollId": 1,
+  "qa": "Yes:yes,No:no,Dunno:dunno,Don't care:dontcare,No opinion:noopinion"
+}
+
+The 'qa' field is a string that is formatted as follows:   
+`<displayed answer>:<value>,<displayed answer>:<value>,..,..`
+
+This makes it possible to split it in the client-side javascript routines, and use it to populate the answer input field in the form.  
+You can make your own choices ofcourse.
+
 ### Table: itgilde_vote
 Contains the actual votes and optional info
 - partition key: pollId (N)
