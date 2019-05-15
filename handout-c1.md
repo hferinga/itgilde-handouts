@@ -288,7 +288,7 @@ If these tests succeed, we can continue to the S3 part
 ## some example files can be downloaded from
 [http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz](http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz)
 
-Configure the urls.js.example file with your API Gateway endpoint URLs and 
+Configure the urls.js.example file with your API Gateway endpoint URLs, rename it to urls.js and 
 upload the files to your S3 bucket.
 
 
