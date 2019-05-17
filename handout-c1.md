@@ -57,8 +57,8 @@ Used for accessing the S3 bucket and objects in it (all actions)
 - Effect: `Allow`
 - Action: `s3:*`
 - Resource:
-    * `arn:aws:s3:::<yourbucketname>`
-    * `arn:aws:s3:::<yourbucketname>/*`
+    * `arn:aws:s3:::[yourbucketname]`
+    * `arn:aws:s3:::[yourbucketname]/*`
 
 ### ITGilde-WAF-Permissions
 Used for deploying an API Gateway to a stage
@@ -126,7 +126,7 @@ Example item:
 }
 ```
 The 'qa' field is a string that is formatted as follows:   
-`<displayed answer>:<value>,<displayed answer>:<value>,..,..`
+`[displayed answer]:[value],[displayed answer]:[value],..,..`
 
 This makes it possible to split it in the client-side javascript routines, and use it to populate the answer input field in the form.  
 You can make your own choices ofcourse.
@@ -153,10 +153,10 @@ For all Integration Types (Methods):
 * Region: eu-west-1
 * Services: DynamoDB
 * HTTP method: POST (always, this is the comms between API Gateway and the API of the DynamoDB)
-* Execution Role: arn:aws:iam::<youraccountid>:role/ITGilde-DynamoDBFullAccess
+* Execution Role: arn:aws:iam::[youraccountid]:role/ITGilde-DynamoDBFullAccess
 
 Role ARN for CloudWatch logging (global setting):
-- arn:aws:iam::<youraccoundid>:role/API-Gateway-Allow_log
+- arn:aws:iam::[youraccoundid]:role/API-Gateway-Allow_log
 
 ## Resource poll
 - Method: **`GET`**
@@ -308,7 +308,7 @@ unless other things fail.
 #!/bin/bash
 
 curl -X POST \
-https://<yourapigatewaystageurl> \
+https://[yourapigatewaystageurl] \
  -H 'Content-Type: application/json' \
  -d '{
  "uuid": '"$(uuidgen)"',
