@@ -113,7 +113,8 @@ Leave rest default
 ### Table: itgilde_poll
 Contains the poll statement and answer choices
 - partition_key: pollId (N)
-Indexes:
+
+Indexes:   
 - none
 
 Example item:
@@ -135,7 +136,8 @@ You can make your own choices ofcourse.
 Contains the actual votes and optional info
 - partition key: pollId (N)
 - sort key: uuid (S)
-Indexes:
+
+Indexes: 
 - partition key: pollId (N)
 - sort key: answer (S)
 - projected attributes: ALL
@@ -153,16 +155,16 @@ For all Integration Types (Methods):
 * Region: eu-west-1
 * Services: DynamoDB
 * HTTP method: POST (always, this is the comms between API Gateway and the API of the DynamoDB)
-* Execution Role: arn:aws:iam::[youraccountid]:role/ITGilde-DynamoDBFullAccess
+* Execution Role: `arn:aws:iam::[youraccountid]:role/ITGilde-DynamoDBFullAccess`
 
 Role ARN for CloudWatch logging (global setting):
-- arn:aws:iam::[youraccoundid]:role/API-Gateway-Allow_log
+- `arn:aws:iam::[youraccoundid]:role/API-Gateway-Allow_log`
 
 ## Resource poll
 - Method: **`GET`**
 - Integration Request:
   *  Action: `Scan`
-  *  Mapping Templates (application/json): When there are no templates defined.
+  *  Mapping Templates (application/json): `When there are no templates defined.`
 
 ```json
 {
@@ -272,7 +274,10 @@ Some references for mapping templates:
 For each resource select the configured method and select the Test icon.  
 Some Tests need a json body to be submitted, others a URL query string.
 
-If these tests succeed, we can continue to the S3 part
+If these tests succeed, we can continue to deploy the API to a stage (e.g prod).
+Record the url of the stage and verify with for instance a curl command if you can reach the endpoint url.
+
+If all this is ok, we can continue to the S3 part.
 
 # S3 static website
 - Create bucket
@@ -288,7 +293,7 @@ If these tests succeed, we can continue to the S3 part
 ## some example files can be downloaded from
 [http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz](http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz)
 
-Configure the urls.js.example file with your API Gateway endpoint URLs, rename it to urls.js and 
+Configure the `urls.js.example` file with your API Gateway endpoint URLs, rename it to `urls.js` and 
 upload the files to your S3 bucket.
 
 
@@ -297,7 +302,7 @@ upload the files to your S3 bucket.
 ```bash
 #!/bin/bash
 
-curl -X GET https://<yourapigatewaystageurl>
+curl -X GET https://[yourapigatewaystageurl]
 
 ```
 
