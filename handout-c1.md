@@ -274,6 +274,30 @@ Some references for mapping templates:
 For each resource select the configured method and select the Test icon.  
 Some Tests need a json body to be submitted, others a URL query string.
 
+(This is where we arrived in our first session.)
+
+If these tests succeed, you can now deploy your API Gateway to a stage (create a new stage).
+
+# Get the endpoint(invoke) URL
+You have to save the invoke URL of the stage. This is later used in the urls.js file (see [below](#example-files))
+
+You can find the invoke URL when you select the deployed stage.   
+It looks something like this:   
+
+```
+https://xabddvd3ffg.execute-api.eu-west-1.amazonaws.com/prod
+```
+
+The `prod` in this case is the stage name.
+
+
+# Enable logging to CloudWatch
+In your stage overview, go to the tab Logs/Tracing and select the following:
+- Enable CloudWatch Logs
+- Log level: INFO
+- Log full requests/responses data
+
+Leave the rest default.
 If these tests succeed, we can continue to deploy the API to a stage (e.g prod).
 Record the url of the stage and verify with for instance a curl command if you can reach the endpoint url.
 
@@ -290,11 +314,28 @@ If all this is ok, we can continue to the S3 part.
 - Allow public access
 - Upload files (again grant public access)
 
-## some example files can be downloaded from
+## some example files can be downloaded from <a name="example-files"></a>
 [http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz](http://itgilde-potd.aws.linux-it-services.nl/itgilde-ch1.tgz)
 
 Configure the `urls.js.example` file with your API Gateway endpoint URLs, rename it to `urls.js` and 
 upload the files to your S3 bucket.
+
+Make sure that the content-type is correct for uploaded HTML files (`text/html`).
+This is sometimes incorrectly set to a default of binary/octet-stream.
+This happens if you upload files with another extension than .html and later rename them using the UI.
+
+If you use the aws cli upload command you should do something like:
+
+```bash
+aws s3 cp --content-type text/html --acl public-read ${SourceFile} s3://${S3Bucket}/${DestPath}
+```
+where:
+- ${SourceFile} = your local file to upload
+- ${S3Bucket} = your bucket name
+- ${DestPath} = absolute path in the S3 bucket (in S3 speak that is called the `key`)
+
+Every time you upload a file, you have to renew the ACL on the file to `public-read`,
+otherwise you get a 403 Access Denied.
 
 
 # Appendices
