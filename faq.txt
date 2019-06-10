@@ -1,0 +1,27 @@
+How to fix some issues FAQ
+
+Q: API Gateway does not have permission to assume the provided role arn:aws:iam::[youraccoundid]:role/ITGilde-DynamoDBFullAccess 
+A: add           "apigateway.amazonaws.com", to role trust relationship or role ITGilde-DynamoDBFullAccess (make it a list [ .., .. ] if it was a single item )
+
+
+Q: User does not have ListWebACLs and AssociateWebACL permissions for Web Application Firewall (WAF Regional). Stage settings except for WAF can still be changed.
+A: create policy ITGilde-WAF-Permissions with actions List (only ListWebACLs), Write (only AssociateWebACL) all resources
+   and add to role ITGilde-DynamoDBFullAccess
+
+Q: User: arn:aws:iam is not authorized to perform: iam:PassRole on resource:
+A: Create policy ITGildeIAMPassRole (service IAM, Actions PassRole, Resource(s) specific arn for ITGilde-DynamoDBFullAccess
+   attach to group workshop
+
+
+Q: Access to XMLHttpRequest at 'https://[yourAPIGW_ID].execute-api.eu-west-1.amazonaws.com/prod/poll/vote' from origin 'https://s3-eu-west-1.amazonaws.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+A: Add CORS enable on method and deploy again
+   or 
+   Add HTTP Headers for method: access-control-allow-origin: '*'
+Note: '*' is actually not such a good idea, but while developing can be handy. CORS does not allow multiple origins!
+
+
+Q: There are no CloudWatch logs for the API Gateway
+A: Goto settings from the API Gateway console and add CloudWatch log role ARN: (you need to create this one first)
+   Goto settings for the stage, select tab Logs/Tracing Enable CloudWatch logs (log level INFO, Log full requests/responses data)
+Note: Create role API-Gateway-Allow_log: policy AmazonAPIGatewayPushToCloudWatchLogs
+
