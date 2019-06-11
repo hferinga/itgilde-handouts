@@ -379,4 +379,20 @@ Paste this in the JSON text field:
 }
 ```
 
+## Some references
+- https://sanderknape.com/2017/10/creating-a-serverless-api-using-aws-api-gateway-and-dynamodb/
+- https://stackoverflow.com/questions/24468459/sending-a-json-to-server-and-retrieving-a-json-in-return-without-jquery
+- https://www.w3schools.com
+- https://forums.aws.amazon.com
+- https://docs.aws.amazon.com
+- https://sookocheff.com/post/api/checking-for-null-in-api-gateway/
+- https://codepen.io/gabrieleromanato/pen/LpLVeQ
+- https://stackoverflow.com/questions/33062097/how-can-i-retrieve-a-users-public-ip-address-via-amazon-api-gateway-lambda-n/46021715
+- https://code.lengstorf.com/get-form-values-as-json/
+- https://stackoverflow.com/questions/24468459/sending-a-json-to-server-and-retrieving-a-json-in-return-without-jquery
+- https://www.atlargeinc.com/insights/how-create-serverless-api-using-aws-api-gateway-lambda-and-dynamodb
+- https://hackernoon.com/full-guide-to-building-a-serverless-api-with-zero-code-c4f7871998f5
 
+Furthermore course material from A Cloud Guru, Safari Books Online and Linux Academy.
+
+And many more ..
