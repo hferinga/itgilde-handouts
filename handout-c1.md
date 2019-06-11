@@ -1,6 +1,8 @@
 # Handout Kickoff "Learning by doing" challenge 1; 16 may 2019/13 june 2019 
 This document is formatted for Gitlab markdown.
 
+**<span style="color:#f56412;">Use the raw version of this document if you want to copy examples from it!</span>**
+
 Publicly available on GitHub:
 
 https://github.com/hferinga/itgilde-handouts/blob/master/handout-c1.md
