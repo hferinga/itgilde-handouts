@@ -1,4 +1,4 @@
-# Handout Kickoff "Learning by doing" challenge 1; 16 may 2019 
+# Handout Kickoff "Learning by doing" challenge 1; 16 may 2019/13 june 2019 
 This document is formatted for Gitlab markdown.
 
 Publicly available on GitHub:
