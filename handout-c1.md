@@ -403,6 +403,6 @@ Paste this in the JSON text field:
 - https://www.atlargeinc.com/insights/how-create-serverless-api-using-aws-api-gateway-lambda-and-dynamodb
 - https://hackernoon.com/full-guide-to-building-a-serverless-api-with-zero-code-c4f7871998f5
 
-Furthermore course material from A Cloud Guru, Safari Books Online and Linux Academy.
+Furthermore course material from `A Cloud Guru`, `Safari Books Online (O'Reilly)` and `Linux Academy`.
 
 And many more ..
