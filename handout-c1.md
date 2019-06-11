@@ -338,6 +338,16 @@ where:
 Every time you upload a file, you have to renew the ACL on the file to `public-read`,
 otherwise you get a 403 Access Denied.
 
+## Example files to copy into S3 bucket
+***
+- index.html
+- error.html
+- urls.js (after modifying)
+- potd-style.css
+- potd_scripts_itgilde.js
+- polloftheday-simple.html
+- potd-itgilde-results.html
+
 
 # Appendices <a name="appendices"></a>
 ## Curl test get poll info example
