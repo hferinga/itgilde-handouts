@@ -276,10 +276,15 @@ Some Tests need a json body to be submitted, others a URL query string.
 
 (This is where we arrived in our first session.)
 
-If these tests succeed, you can now deploy your API Gateway to a stage (create a new stage).
+If these tests succeed, you can now continue to `deploy your API Gateway` to a stage (create a new stagem, e.g. `prod`).
+
+Record the url of the stage and verify with for instance a curl command if you can reach the endpoint url.
+Some examples are in the [Appendices](#appendices).
+
+If all this is ok, we can continue to the S3 part.
 
 # Get the endpoint(invoke) URL
-You have to save the invoke URL of the stage. This is later used in the urls.js file (see [below](#example-files))
+You have to save the invoke URL of the stage. This is later used in the `urls.js` file (see [below](#example-files))
 
 You can find the invoke URL when you select the deployed stage.   
 It looks something like this:   
@@ -298,10 +303,6 @@ In your stage overview, go to the tab Logs/Tracing and select the following:
 - Log full requests/responses data
 
 Leave the rest default.
-If these tests succeed, we can continue to deploy the API to a stage (e.g prod).
-Record the url of the stage and verify with for instance a curl command if you can reach the endpoint url.
-
-If all this is ok, we can continue to the S3 part.
 
 # S3 static website
 - Create bucket
@@ -338,7 +339,7 @@ Every time you upload a file, you have to renew the ACL on the file to `public-r
 otherwise you get a 403 Access Denied.
 
 
-# Appendices
+# Appendices <a name="appendices"></a>
 ## Curl test get poll info example
 ```bash
 #!/bin/bash
