@@ -276,7 +276,7 @@ Some Tests need a json body to be submitted, others a URL query string.
 
 (This is where we arrived in our first session.)
 
-If these tests succeed, you can now continue to `deploy your API Gateway` to a stage (create a new stagem, e.g. `prod`).
+If these tests succeed, you can now continue to `deploy your API Gateway` to a stage (create a new stage, e.g. `prod`).
 
 Record the url of the stage and verify with for instance a curl command if you can reach the endpoint url.
 Some examples are in the [Appendices](#appendices).
